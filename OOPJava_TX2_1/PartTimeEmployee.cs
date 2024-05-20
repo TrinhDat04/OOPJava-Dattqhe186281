@@ -22,7 +22,7 @@ namespace OOPJava_TX2_1
 
         public override string ToString()
         {
-            return base.ToString();
+            return base.ToString()+$" Working Hours: {workingHours} Salary = {calculateSalary()}";
         }
 
     }
