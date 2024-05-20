@@ -53,13 +53,19 @@
             try
             {
                 Console.Write("Enter name: ");
-                string name = Console.ReadLine();
+                string name = Console.ReadLine(); 
+                if (name == null || name.Trim() == "")
+                {
+                    throw new Exception("Invalid input.");
+
+                }
                 Console.Write("Enter address: ");
                 string address = Console.ReadLine();
                 Console.Write("Enter salary: ");
+               
                 if (!int.TryParse(Console.ReadLine(), out int salary))
                 {
-                    throw new Exception("Invalid salary input.");
+                    throw new Exception("Invalid input.");
                 }
 
                 employees.Add(new Employee(name, address, salary));
@@ -76,6 +82,11 @@
             {
                 Console.Write("Enter name: ");
                 string name = Console.ReadLine();
+                if (name == null || name.Trim() == "")
+                {
+                    throw new Exception("Invalid input.");
+
+                }
                 Console.Write("Enter address: ");
                 string address = Console.ReadLine();
                 Console.Write("Enter balance: ");

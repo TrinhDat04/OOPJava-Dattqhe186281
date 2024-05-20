@@ -9,7 +9,7 @@ namespace OOPJava_TX2_1
     public abstract class Employee : IEmployee //tạo lớp trừu tượng Employee kế thừa Inteface IEmployee
     {
         private String name;
-        protected int paymentPerHour { get; set; }
+        private int paymentPerHour { get; set; }
         public Employee(String name, int paymentPerHour) { 
             this.name = name;
             this.paymentPerHour = paymentPerHour;
@@ -20,6 +20,15 @@ namespace OOPJava_TX2_1
         public string getName()
         {
             return name;
+        }
+        public void setPaymentPerHours(int paymentPerHour)
+        {
+            this.paymentPerHour = (int) paymentPerHour;
+        }
+
+        public int getPaymentPerHours()
+        {
+            return paymentPerHour;
         }
         public override string ToString()
         {
