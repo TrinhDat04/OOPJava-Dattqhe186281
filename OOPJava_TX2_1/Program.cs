@@ -53,6 +53,11 @@ namespace OOPJava_TX2_1
             {
                 Console.Write("Enter name: ");
                 string name = Console.ReadLine();
+                if (name == null || name.Trim() == "")
+                {
+                    throw new FormatException();
+
+                }
 
                 Console.Write("Enter payment per hour: ");
                 int paymentPerHour = int.Parse(Console.ReadLine());
@@ -76,7 +81,7 @@ namespace OOPJava_TX2_1
                 string name = Console.ReadLine();
                 if (name == null || name.Trim() == "")
                 {
-                    throw new FormatException;
+                    throw new FormatException();
 
                 }
 

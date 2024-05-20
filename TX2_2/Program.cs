@@ -56,23 +56,18 @@
                 string name = Console.ReadLine(); 
                 if (name == null || name.Trim() == "")
                 {
-                    throw new Exception("Invalid input.");
+                    throw new FormatException() ;
 
                 }
                 Console.Write("Enter address: ");
                 string address = Console.ReadLine();
                 Console.Write("Enter salary: ");
-               
-                if (!int.TryParse(Console.ReadLine(), out int salary))
-                {
-                    throw new Exception("Invalid input.");
-                }
-
+               int salary = int.Parse(Console.ReadLine());
                 employees.Add(new Employee(name, address, salary));
             }
-            catch (Exception e)
+            catch (FormatException)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Invalid input. Please enter correct data.");
             }
         }
 
@@ -84,22 +79,18 @@
                 string name = Console.ReadLine();
                 if (name == null || name.Trim() == "")
                 {
-                    throw new Exception("Invalid input.");
+                    throw new FormatException();
 
                 }
                 Console.Write("Enter address: ");
                 string address = Console.ReadLine();
                 Console.Write("Enter balance: ");
-                if (!int.TryParse(Console.ReadLine(), out int balance))
-                {
-                    throw new Exception("Invalid balance input.");
-                }
-
+               int balance = int.Parse(Console.ReadLine());
                 customers.Add(new Customer(name, address, balance));
             }
-            catch (Exception e)
+            catch (FormatException)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Invalid input. Please enter correct data.");
             }
         }
 
