@@ -93,13 +93,18 @@ namespace OOPJava_TX2_1
                 Console.WriteLine("No employees available.");
                 return;
             }
+            
             //trả về phần tử đầu tiên của mảng đã sort từ lớn -> bé
             var highestPaidFullTime = employees.OfType<FullTimeEmployee>().OrderByDescending(e => e.calculateSalary()).FirstOrDefault();
             var highestPaidPartTime = employees.OfType<PartTimeEmployee>().OrderByDescending(e => e.calculateSalary()).FirstOrDefault();
 
             if (highestPaidFullTime != null)
             {
-                Console.WriteLine("Highest Paid Full-Time Employee: " + highestPaidFullTime);
+                foreach (var emp in employees)//loop để in ra nếu như có nhiều employee có lương bằng nhau và cao nhất
+                {
+                    if(emp is FullTimeEmployee && emp.calculateSalary()==highestPaidFullTime.calculateSalary())
+                        Console.WriteLine("Highest Paid Full-Time Employee: " + emp);
+                }
             }
             else
             {
@@ -108,7 +113,11 @@ namespace OOPJava_TX2_1
 
             if (highestPaidPartTime != null)
             {
-                Console.WriteLine("Highest Paid Part-Time Employee: " + highestPaidPartTime);
+                foreach (var emp in employees)
+                {
+                    if (emp is PartTimeEmployee && emp.calculateSalary() == highestPaidPartTime.calculateSalary())
+                        Console.WriteLine("Highest Paid Part-time Employee: " + emp);
+                }
             }
             else
             {

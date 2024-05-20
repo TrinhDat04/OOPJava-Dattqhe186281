@@ -103,8 +103,12 @@
             var highestPaidEmp = employees.OrderByDescending(e => e.GetSalary()).FirstOrDefault();
             if(highestPaidEmp != null)
             {
-                Console.WriteLine("Highest Paid Employee is:");
-                highestPaidEmp.display();
+                Console.WriteLine("Highest Paid Employee: ");
+                foreach (var emp in employees)//loop để in nếu như có nhiều employee cùng có salary cao nhất
+                {
+                    if (emp.GetSalary() == highestPaidEmp.GetSalary())
+                        emp.display();
+                }
 
             }
             return;
@@ -122,7 +126,11 @@
             if (lowestBalanceCus != null)
             {
                 Console.WriteLine("Lowest balance customer is");
-                lowestBalanceCus.display();
+                foreach (var customer in customers)//loop để in nếu như có nhiều customer cùng có balance thấp nhất
+                {
+                    if(customer.getBalance()==lowestBalanceCus.getBalance())
+                        customer.display();
+                }
             }
             return;
         }
