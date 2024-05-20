@@ -15,7 +15,7 @@ namespace OOPJava_TX2_1
 
         private int workingHours { get; set; }
 
-        public override int calculateSalary()
+        public override int calculateSalary()//ghi đè phương thức calculateSalary() ở Employee
         {
             return workingHours * paymentPerHour; 
         }

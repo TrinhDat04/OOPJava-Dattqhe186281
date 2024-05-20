@@ -12,7 +12,7 @@ namespace OOPJava_TX2_1
         {
         }
 
-        public override int calculateSalary()
+        public override int calculateSalary()//ghi đè phương thức calculateSalary() ở Employee
         {
             return 8 * paymentPerHour;
         }

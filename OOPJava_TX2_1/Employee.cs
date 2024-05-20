@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPJava_TX2_1
 {
-    public abstract class Employee : IEmployee
+    public abstract class Employee : IEmployee //tạo lớp trừu tượng Employee kế thừa Inteface IEmployee
     {
         private String name;
         protected int paymentPerHour { get; set; }
@@ -14,7 +14,7 @@ namespace OOPJava_TX2_1
             this.name = name;
             this.paymentPerHour = paymentPerHour;
         }
-
+        
         public abstract int calculateSalary();
 
         public string getName()
