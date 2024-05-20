@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPJava_TX2_1", "OOPJava_TX2_1\OOPJava_TX2_1.csproj", "{C1AB1D68-687A-4ADF-8C4A-EA3DE40EF29D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TX2_2", "TX2_2\TX2_2.csproj", "{5389ECFB-7BFA-4804-A6D2-1EECEDD0955B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C1AB1D68-687A-4ADF-8C4A-EA3DE40EF29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1AB1D68-687A-4ADF-8C4A-EA3DE40EF29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1AB1D68-687A-4ADF-8C4A-EA3DE40EF29D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5389ECFB-7BFA-4804-A6D2-1EECEDD0955B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5389ECFB-7BFA-4804-A6D2-1EECEDD0955B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5389ECFB-7BFA-4804-A6D2-1EECEDD0955B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5389ECFB-7BFA-4804-A6D2-1EECEDD0955B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

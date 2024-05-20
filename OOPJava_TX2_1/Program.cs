@@ -93,7 +93,7 @@ namespace OOPJava_TX2_1
                 Console.WriteLine("No employees available.");
                 return;
             }
-
+            //trả về phần tử đầu tiên của mảng đã sort từ lớn -> bé
             var highestPaidFullTime = employees.OfType<FullTimeEmployee>().OrderByDescending(e => e.calculateSalary()).FirstOrDefault();
             var highestPaidPartTime = employees.OfType<PartTimeEmployee>().OrderByDescending(e => e.calculateSalary()).FirstOrDefault();
 
